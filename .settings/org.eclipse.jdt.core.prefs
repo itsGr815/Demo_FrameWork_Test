@@ -1,0 +1,8 @@
+#Tue Jun 10 16:39:36 IST 2025
+encoding/src/test/java=Cp1252
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.8
+org.eclipse.jdt.core.compiler.source=1.8
+encoding/src/test/resources=Cp1252
+eclipse.preferences.version=1
+encoding/src/main/java=Cp1252
+org.eclipse.jdt.core.compiler.compliance=1.8
