@@ -2,13 +2,13 @@ package com.demoq.Initializer;
 
 
 import com.demoq.Constants.DriverConstants;
+import com.demoq.Constants.Login;
+import com.demoq.util.execution.AllDataHolder;
 import org.slf4j.LoggerFactory;
-import util.execution.AllDataHolder;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Optional;
 import java.util.Properties;
 
 
@@ -25,8 +25,12 @@ public class ConfigInitializer implements DriverConstants {
 
     public static void setConfigProperties() throws IOException {
        getProp().load(new FileInputStream(new File(CONFIGPATH).getAbsolutePath()));
-       AllDataHolder.setBrowser(Optional.ofNullable(System.getenv(BROWSER)).orElse(prop.getProperty(BROWSER)));
-        AllDataHolder.getDemo().test();
+
+
+       AllDataHolder.setBrowser(getProp().getProperty(DriverConstants.BROWSER));
+       AllDataHolder.setUrl(getProp().getProperty(Login.url));
+       Logger.debug(AllDataHolder.getBrowser());
+
 
     }
 

@@ -6,5 +6,5 @@ package com.demoq.Constants;
 public interface Login {
 
     String username = "Username";
-    String url = "https://google.com";
+    String url = "url";
 }
